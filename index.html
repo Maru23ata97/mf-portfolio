@@ -6,12 +6,26 @@
   crossorigin="anonymous"
 />
 
-<!-- JavaScript Bundle with Popper -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-  crossorigin="anonymous"
-></script>
+<!-- CHANGE NAVBAR COLOR SCROLL -->
+
+<script>
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 60 ||
+      document.documentElement.scrollTop > 60
+    ) {
+      document.getElementById('navbar').style.backgroundColor = 'grey';
+      console.log('1');
+    } else {
+      document.getElementById('navbar').style.backgroundColor = 'transparent';
+      console.log('2');
+    }
+  }
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +34,7 @@
   rel="stylesheet"
 />
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg">
+<nav id="navbar" class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">PORTFOLIO</a>
     <button
@@ -37,26 +51,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Acceuil</a>
+          <a class="nav-link text-info" href="#home">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">A propos</a>
+          <a class="nav-link text-info" href="#about">A propos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Compétences</a>
+          <a class="nav-link text-info" href="#skills">Compétences</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Services</a>
+          <a class="nav-link text-info" href="#services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-info" href="#">Contact</a>
+          <a class="nav-link text-info" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!---Section Acceuil--->
+<!---Section Accueil--->
 <section id="home">
   <div class="container mb-5">
     <div class="row">
@@ -67,7 +81,7 @@
           25 ans
         </h1>
         <h4 class="text-info">Souriant, dynamique et motivé</h4>
-        <div class="buttons mt-4">
+        <div class="buttons my-4">
           <button class="btn btn-outline-info px-4 py-2">Embauche moi</button>
           <button class="btn btn-info text-white px-4 py-2">
             A propos de moi
@@ -75,32 +89,28 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div
-          id="carouselExampleSlidesOnly"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="https://mail.google.com/mail/u/0?ui=2&ik=c7b13c9ea3&attid=0.1.1&permmsgid=msg-f:1749723992536317277&th=184844b3661afd5d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8rO27pGCrX45Uh-agdpbQGKFzUl4j3ekYUUDJ3lwZA3P8cMTy2VrWLfL1WUG1ei19c9rEb6kLVq_U-jIUj5CZxfZZfQHnyEfE4YE1cqF3NpE8WgmqJnR2H8VY&disp=emb"
-                class="d-block w-100"
+                src="https://picsum.photos/id/237/1000/1000"
+                class="d-block w-100 img-fluid"
                 alt="..."
                 height="550px"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="https://picsum.photos/200"
-                class="d-block w-100"
+                src="https://picsum.photos/id/237/1000/1000.jpg"
+                class="d-block w-100 img-fluid"
                 alt="..."
                 height="600px"
               />
             </div>
             <div class="carousel-item">
               <img
-                src="https://mail.google.com/mail/u/0?ui=2&ik=c7b13c9ea3&attid=0.1.1&permmsgid=msg-f:1749723992536317277&th=184844b3661afd5d&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8rO27pGCrX45Uh-agdpbQGKFzUl4j3ekYUUDJ3lwZA3P8cMTy2VrWLfL1WUG1ei19c9rEb6kLVq_U-jIUj5CZxfZZfQHnyEfE4YE1cqF3NpE8WgmqJnR2H8VY&disp=emb"
-                class="d-block w-100"
+                src="https://picsum.photos/id/237/1000/1000.jpg"
+                class="d-block w-100 img-fluid"
                 alt="..."
                 height="600px"
               />
@@ -122,17 +132,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 img-profil overflow-hidden">
         <img
-          src="https://mail.google.com/mail/u/0?ui=2&ik=c7b13c9ea3&attid=0.1.1&permmsgid=msg-f:1749711053999726985&th=184838eee93a6189&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8hEEQ1I91RhUBcEB44AL6SnYtxPNmJkjl1zi3N-qIzbAYvYKbsIK6YIKjdrZOBgfO7Olp5OOV-RdT4FG64cHP-wpgrlgsVisfCMl5DdSSVhL0JF1mBIdcQuLM&disp=emb"
+          src="https://picsum.photos/1000/1300?grayscale"
+          class="img-fluid"
           alt=""
-          height="500px"
-          width="400px"
         />
       </div>
       <div class="col-md-6">
-        <h1 class="fw-bold">FIRIAPU Tau</h1>
-        <h3 class="text-info mb-4">WEB DEVELOPER</h3>
+        <h1 class="fw-bold md-4">FIRIAPU Tau</h1>
+        <h3 class="text-info md-8">WEB DEVELOPER</h3>
         <p class="lead mb-4">
           Passionné par la réalisation et le développement de projets web, je me
           suis tout naturellement tourné vers une carrière de développeur web.
@@ -245,7 +254,7 @@
 </section>
 
 <!---Section Services--->
-<section id="service">
+<section id="services">
   <div class="container my-5 py-5">
     <div class="row mb-5">
       <div class="col-12">
@@ -254,14 +263,15 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card p-4" style="width: 18rem">
+      <div class="col-lg -4">
+        <div class="card mb-5 mx-auto mb-5" style="width: 18rem">
           <img
             src="https://cdn.ucberkeleybootcamp.com/wp-content/uploads/sites/106/2020/03/Web-Developer-Bootcamp-San-Francisco.jpeg"
-            class="card-img-top"
+            class="card-img-top w-100 img-fluid"
             alt="..."
+            style="height: 150px !important"
           />
-          <div class="card-body text-center">
+          <div class="card-body text-center p-5">
             <h3>Frontend Development</h3>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
@@ -270,14 +280,15 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-4" style="width: 18rem">
+      <div class="col-lg-4">
+        <div class="card mb-5 mx-auto mb-5" style="width: 18rem">
           <img
             src="https://www.aceinfoway.com/blog/wp-content/uploads/2020/07/front-end-developer.jpg"
-            class="card-img-top"
+            class="card-img-top w-100 img-fluid"
             alt="..."
+            style="height: 150px !important"
           />
-          <div class="card-body text-center">
+          <div class="card-body text-center p-5">
             <h3>backend Development</h3>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
@@ -286,14 +297,15 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card p-4" style="width: 18rem">
+      <div class="col-lg-4">
+        <div class="card mb-5 mx-auto mb-5" style="width: 18rem">
           <img
             src="https://tolustar.com/wp-content/uploads/2020/02/Front-end-Development.jpeg"
-            class="card-img-top"
+            class="card-img-top w-100 img-fluid"
             alt="..."
+            style="height: 150px !important"
           />
-          <div class="card-body text-center">
+          <div class="card-body text-center p-5">
             <h3>Data Base Management</h3>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
@@ -356,3 +368,18 @@
     </div>
   </div>
 </section>
+
+<!-- JavaScript Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  const myCarouselElement = document.querySelector('#myCarousel');
+  const carousel = new bootstrap.Carousel(myCarouselElement, {
+    interval: 3000,
+    wrap: false,
+  });
+</script>

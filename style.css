@@ -1,4 +1,5 @@
 * {
+  scroll-behavior: smooth;
   background-color: whitesmoke;
   margin: 0;
   padding: 0;
@@ -6,6 +7,11 @@
 /*Navbar */
 .navbar-nav {
   font-size: 18px;
+}
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
 }
 /*Navbar */
 .btn:hover {
@@ -32,5 +38,14 @@
 }
 .card:hover {
   transform: scale(1.1);
-  box-shadow: 1px 2px 10px black;
+  box-shadow: 1px 2px 10px rgb(201, 201, 201);
+}
+
+/* Carousel*/
+.carousel-item {
+  max-height: 550px;
+}
+/* image profile*/
+.img-profil {
+  max-height: 500px;
 }
