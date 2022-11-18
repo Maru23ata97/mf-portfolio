@@ -1,6 +1,6 @@
 * {
   scroll-behavior: smooth;
-  background-color: gray;
+  background-color: gray !important;
   margin: 0;
   padding: 0;
 }
